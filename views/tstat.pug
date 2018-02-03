@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+      
+  body
+    table(cellpadding="5px")
+      tbody
+        tr
+          td(colspan="2") 
+            h1 #{title}
+        tr 
+          td current temp:
+          td(align="center") <b>#{temp}&deg;</b>F
+        tr
+          td heat temp:
+          td(align="center") <b>#{t_heat}&deg;</b>F
+        tr
+          td 
+            form(name="set-temp", method="post")
+              div.input
+                span.label temp: 
+                input(type="text", name="temp", size="5")
+              td(align="center") 
+                div.actions
+                  input(type="submit", value="set")
